@@ -26,7 +26,7 @@ function draw() {
     if (ball_y < 10) {
         ball_y = 10;
     }
-    ball_dy = ball_dy + 0.5
+    ball_dy = ball_dy + .67
 }
 
 function mousePressed() {
