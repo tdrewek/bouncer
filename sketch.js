@@ -32,6 +32,9 @@ function draw() {
     if (ball_y <= 25){
         ball_dy = + ball_dy;
     }
+    if (ball_y < 25){
+        ball_y = 25;
+    }
     ball_dy = ball_dy + .67;
 
 }
