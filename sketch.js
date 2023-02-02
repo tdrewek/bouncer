@@ -1,15 +1,16 @@
-var ball_x = 250
-var ball_y = 250
+var ball_x = 250;
+var ball_y = 250;
 
-var ball_dx = 0
-var ball_dy = 0
+var ball_dx = 0;
+var ball_dy = 0;
 
 function setup() {
     createCanvas(500, 500);
 }
 
 function ball() {
-    circle(ball_x, ball_y, 50)
+    circle(ball_x, ball_y, 50);
+    background(230);
 }
   
 function draw() {
@@ -23,13 +24,13 @@ function draw() {
     if (ball_y >= 500){
         ball_dy = - ball_dy;
     }
-    ball_dy = ball_dy + .67
+    ball_dy = ball_dy + .67;
 }
 
 function mousePressed() {
-    ball_x = mouseX
-    ball_y = mouseY
-    ball_dx = 0
-    ball_dy = 0
+    ball_x = mouseX;
+    ball_y = mouseY;
+    ball_dx = 0;
+    ball_dy = 0;
 }
 
