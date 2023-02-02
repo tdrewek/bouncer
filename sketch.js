@@ -10,7 +10,6 @@ function setup() {
 
 function ball() {
     circle(ball_x, ball_y, 50);
-    background(230);
 }
   
 function draw() {
@@ -18,13 +17,15 @@ function draw() {
     ball();
     ball_x = ball_x + ball_dx;
     ball_y = ball_y + ball_dy;
-    if ((ball_x <= 0) || (ball_x >= 500)) {
-        ball_dx = - ball_dx;
+    while(ball_y < 500){
+        if ((ball_x <= 0) || (ball_x >= 500)) {
+            ball_dx = - ball_dx;
+        }
+        if (ball_y >= 500){
+            ball_dy = - ball_dy;
+        }
+        ball_dy = ball_dy + .67;
     }
-    if (ball_y >= 500){
-        ball_dy = - ball_dy;
-    }
-    ball_dy = ball_dy + .67;
 }
 
 function mousePressed() {
