@@ -17,19 +17,19 @@ function draw() {
     ball();
     ball_x = ball_x + ball_dx;
     ball_y = ball_y + ball_dy;
-    if (ball_x >= 500) {
+    if (ball_x >= 475) {
         ball_dx = - ball_dx;
     }
-    if (ball_x <= 0){
+    if (ball_x <=25){
         ball_dx = + ball_dx;
     }
-    if (ball_y >= 500){
+    if (ball_y >= 475){
         ball_dy = - ball_dy;
     }
-    if (ball_y > 500){
-        ball_y = 500;
+    if (ball_y > 475){
+        ball_y = 475;
     }
-    if (ball_y <= 0){
+    if (ball_y <= 25){
         ball_dy = + ball_dy;
     }
     ball_dy = ball_dy + .67;
