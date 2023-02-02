@@ -1,15 +1,15 @@
-ball_x = 200
-ball_y = 200
+var ball_x = 250
+var ball_y = 250
 
-ball_dx = 0
-ball_dy = 0
+var ball_dx = 0
+var ball_dy = 0
 
 function setup() {
-    createCanvas(400, 400);
+    createCanvas(500, 500);
 }
 
 function ball() {
-    circle(ball_x, ball_y, 30)
+    circle(ball_x, ball_y, 50)
 }
   
 function draw() {
@@ -17,17 +17,11 @@ function draw() {
     ball();
     ball_x = ball_x + ball_dx;
     ball_y = ball_y + ball_dy;
-    if ((ball_x <= 0) || (ball_x >= 400)) {
+    if ((ball_x <= 0) || (ball_x >= 500)) {
         ball_dx = - ball_dx;
     }
-    if (ball_y <= 10) {
+    if (ball_y >= 500){
         ball_dy = - ball_dy;
-    }
-    if (ball_y >= 400){
-        ball_dy = - ball_dy;
-    }
-    if (ball_y < 10) {
-        ball_y = 10;
     }
     ball_dy = ball_dy + .67
 }
