@@ -24,7 +24,7 @@ function draw() {
         ball_dy = - ball_dy;
     }
     if (ball_y >= 400){
-        ball_y = 400;
+        ball_dy = - ball_dy;
     }
     if (ball_y < 10) {
         ball_y = 10;
