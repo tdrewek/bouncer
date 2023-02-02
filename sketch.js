@@ -26,10 +26,13 @@ function draw() {
     if (ball_y >= 500){
         ball_dy = - ball_dy;
     }
+    if (ball_y > 500){
+        ball_y = 500;
+    }
     if (ball_y <= 0){
         ball_dy = + ball_dy;
     }
-    ball_dy = ball_dy * .67;
+    ball_dy = ball_dy + .67;
 
 }
 
